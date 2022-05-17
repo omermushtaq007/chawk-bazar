@@ -4,7 +4,7 @@
   },
   "build": {
     "env": {
-      "NEXT_PUBLIC_REST_API_ENDPOINT": "Put your api endpoint here"
+      "NEXT_PUBLIC_REST_API_ENDPOINT": "https://chawk-bazar.vercel.app/api"
     }
   }
 }
