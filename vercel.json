@@ -4,7 +4,7 @@
   },
   "build": {
     "env": {
-      "NEXT_PUBLIC_REST_API_ENDPOINT": "https://chawk-bazar-31y6qwsic-omermushtaq007.vercel.app/api"
+      "NEXT_PUBLIC_REST_API_ENDPOINT": "https://chawk-bazar.vercel.app/api"
     }
   }
 }
