@@ -27,39 +27,39 @@ export const siteSettings = {
 			{
 				id: 1,
 				path: "/",
-				label: "menu-demos",
-				subMenu: [
-					{
-						id: 1,
-						path: "/",
-						label: "menu-modern",
-					},
-					{
-						id: 2,
-						path: "/standard",
-						label: "menu-standard",
-					},
-					{
-						id: 3,
-						path: "/minimal",
-						label: "menu-minimal",
-					},
-					{
-						id: 4,
-						path: "/vintage",
-						label: "menu-vintage",
-					},
-					{
-						id: 5,
-						path: "/classic",
-						label: "menu-classic",
-					},
-					{
-						id: 6,
-						path: "/trendy",
-						label: "menu-trendy",
-					},
-				],
+				label: "Home",
+				// subMenu: [
+				// 	{
+				// 		id: 1,
+				// 		path: "/",
+				// 		label: "menu-modern",
+				// 	},
+				// 	{
+				// 		id: 2,
+				// 		path: "/standard",
+				// 		label: "menu-standard",
+				// 	},
+				// 	{
+				// 		id: 3,
+				// 		path: "/minimal",
+				// 		label: "menu-minimal",
+				// 	},
+				// 	{
+				// 		id: 4,
+				// 		path: "/vintage",
+				// 		label: "menu-vintage",
+				// 	},
+				// 	{
+				// 		id: 5,
+				// 		path: "/classic",
+				// 		label: "menu-classic",
+				// 	},
+				// 	{
+				// 		id: 6,
+				// 		path: "/trendy",
+				// 		label: "menu-trendy",
+				// 	},
+				// ],
 			},
 			{
 				id: 2,
