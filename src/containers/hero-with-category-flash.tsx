@@ -35,11 +35,11 @@ const HeroWithCategoryFlash: React.FC<Props> = ({
 }) => {
 	return (
 		<div
-			className={`grid grid-cols-1 lg:grid-cols-7 2xl:grid-cols-9 gap-5 xl:gap-7 lg:gap-y-14 ${className}`}
+			className={`grid grid-cols-1 lg:grid-cols-7 2xl:grid-cols-10 gap-5 xl:gap-7 lg:gap-y-14 ${className}`}
 		>
 			<CategoryListCardSection />
 
-			<div className="col-span-full lg:col-span-5 xl:col-span-7 row-span-full lg:row-auto grid grid-cols-2 gap-2 md:gap-3.5 lg:gap-5 xl:gap-7">
+			<div className="col-span-full lg:col-span-5 xl:col-span-5 2xl:col-span-8 row-span-full lg:row-auto grid grid-cols-2 gap-2 md:gap-3.5 lg:gap-5 xl:gap-7">
 				{banners.map((banner: any) => (
 					<BannerCard
 						key={`banner--key${banner.id}`}
