@@ -652,12 +652,12 @@ export const homeFourGridBanners = [
     image: {
       mobile: {
         url: "/assets/images/banner/grid/small/banner-mobile-1.jpg",
-        width: 470,
+        width: 670,
         height: 190,
       },
       desktop: {
         url: "/assets/images/banner/grid/small/banner-1.jpg",
-        width: 980,
+        width: 1340,
         height: 340,
       },
     },
@@ -675,7 +675,7 @@ export const homeFourGridBanners = [
       },
       desktop: {
         url: "/assets/images/banner/grid/small/banner-2.jpg",
-        width: 480,
+        width: 680,
         height: 340,
       },
     },
@@ -693,7 +693,7 @@ export const homeFourGridBanners = [
       },
       desktop: {
         url: "/assets/images/banner/grid/small/banner-3.jpg",
-        width: 480,
+        width: 680,
         height: 340,
       },
     },

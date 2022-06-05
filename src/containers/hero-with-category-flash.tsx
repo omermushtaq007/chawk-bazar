@@ -39,7 +39,7 @@ const HeroWithCategoryFlash: React.FC<Props> = ({
 		>
 			<CategoryListCardSection />
 
-			<div className="col-span-full lg:col-span-5 xl:col-span-5 row-span-full lg:row-auto grid grid-cols-2 gap-2 md:gap-3.5 lg:gap-5 xl:gap-7">
+			<div className="col-span-full lg:col-span-5 xl:col-span-7 row-span-full lg:row-auto grid grid-cols-2 gap-2 md:gap-3.5 lg:gap-5 xl:gap-7">
 				{banners.map((banner: any) => (
 					<BannerCard
 						key={`banner--key${banner.id}`}
@@ -50,7 +50,7 @@ const HeroWithCategoryFlash: React.FC<Props> = ({
 				))}
 			</div>
 
-			<SellWithProgressCardSection />
+			{/* <SellWithProgressCardSection /	> */}
 		</div>
 	);
 };
