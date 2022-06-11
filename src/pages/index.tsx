@@ -13,9 +13,9 @@ import DownloadApps from "@components/common/download-apps";
 import ProductsFlashSaleBlock from "@containers/product-flash-sale-block";
 import ProductsFeatured from "@containers/products-featured";
 import BannerSliderBlock from "@containers/banner-slider-block";
-import ExclusiveBlock from "@containers/exclusive-block";
-import HeroWithCategoryFlash from "@containers/hero-with-category-flash";
-import Subscription from "@components/common/subscription";
+// import ExclusiveBlock from "@containers/exclusive-block";
+// import HeroWithCategoryFlash from "@containers/hero-with-category-flash";
+// import Subscription from "@components/common/subscription";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ROUTES } from "@utils/routes";
 import { homeFourBanner as banner } from "@framework/static/banner";
@@ -25,7 +25,7 @@ export default function Home() {
 	return (
 		<>
 			<Container>
-				<HeroWithCategoryFlash />
+				{/* <HeroWithCategoryFlash /> */}
 			</Container>
 			<BannerSliderBlock />
 			<Container>
@@ -50,7 +50,7 @@ export default function Home() {
 					className="mb-11 md:mb-12 lg:mb-14 2xl:mb-16"
 				/> */}
 				<ProductsFlashSaleBlock date={"2023-03-01T01:02:03"} />
-				<ExclusiveBlock />
+				{/* <ExclusiveBlock /> */}
 				<BrandBlock sectionHeading="text-top-brands" />
 				{/* <NewArrivalsProductFeed /> */}
 				{/* <BannerCard
@@ -62,7 +62,7 @@ export default function Home() {
 				<DownloadApps />
 				{/* <Support /> */}
 				{/* <Instagram /> */}
-				<Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" />
+				{/* <Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" /> */}
 			</Container>
 			<Divider className="mb-0" />
 		</>
