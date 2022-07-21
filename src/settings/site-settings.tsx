@@ -14,7 +14,7 @@ export const siteSettings = {
 		address: "",
 	},
 	logo: {
-		url: "/assets/images/buchqi.png",
+		url: "/assets/images/buchqi(black).png",
 		alt: "Buchqi",
 		href: "/",
 		width: 95,

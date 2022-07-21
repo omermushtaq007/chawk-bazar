@@ -57,7 +57,7 @@ const Header: React.FC = () => {
 							<span className="bar" />
 						</span>
 					</button>
-					<Logo className="bg-black p-2" />
+					<Logo />
 
 					<HeaderMenu
 						data={site_header.menu}

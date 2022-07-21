@@ -21,7 +21,6 @@ const HeaderMenu: React.FC<MenuProps> = ({ data, className }) => {
 				}`}
 				key={item.id}
 				>
-					{console.log(item.label)}
 					<Link
 						href={item.path}
 						className="inline-flex items-center text-sm xl:text-base text-heading px-3 xl:px-4 py-2 font-normal relative group-hover:text-black"
@@ -44,9 +43,7 @@ const HeaderMenu: React.FC<MenuProps> = ({ data, className }) => {
 								{item.subMenu.map((menu: any, index: number) => {
 									const dept: number = 1;
 									const menuName: string = `sidebar-menu-${dept}-${index}`;
-									{console.log("menuName ", menuName)}
-
-									return (
+								return (
 										<ListMenu
 											dept={dept}
 											data={menu}
