@@ -14,7 +14,7 @@ export default function OrderInformation() {
 	const { price: total } = usePrice(
 		data && {
 			amount: data.shipping_fee ? data.total + data.shipping_fee : data.total,
-			currencyCode: "USD",
+			currencyCode: "PKR",
 		}
 	);
 	if (isLoading) return <p>Loading...</p>;

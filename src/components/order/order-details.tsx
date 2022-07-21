@@ -6,7 +6,7 @@ import { useTranslation } from "next-i18next";
 const OrderItemCard = ({ product }: { product: OrderItem }) => {
 	const { price: itemTotal } = usePrice({
 		amount: product.price * product.quantity,
-		currencyCode: "USD",
+		currencyCode: "PKR",
 	});
 	return (
 		<tr
@@ -31,7 +31,7 @@ const OrderDetails: React.FC<{ className?: string }> = ({
 	const { price: subtotal } = usePrice(
 		order && {
 			amount: order.total,
-			currencyCode: "USD",
+			currencyCode: "PKR",
 		}
 	);
 	const { price: total } = usePrice(
@@ -39,13 +39,13 @@ const OrderDetails: React.FC<{ className?: string }> = ({
 			amount: order.shipping_fee
 				? order.total + order.shipping_fee
 				: order.total,
-			currencyCode: "USD",
+			currencyCode: "PKR",
 		}
 	);
 	const { price: shipping } = usePrice(
 		order && {
 			amount: order.shipping_fee,
-			currencyCode: "USD",
+			currencyCode: "PKR",
 		}
 	);
 	if (isLoading) return <p>Loading...</p>;

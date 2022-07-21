@@ -39,7 +39,7 @@ const ProductSingleDetails: React.FC = () => {
 		data && {
 			amount: data.sale_price ? data.sale_price : data.price,
 			baseAmount: data.price,
-			currencyCode: "USD",
+			currencyCode: "PKR",
 		}
 	);
 	if (isLoading) return <p>Loading...</p>;

@@ -5,9 +5,9 @@ import { USFlag } from "@components/icons/USFlag";
 import { DEFlag } from "@components/icons/DEFlag";
 import { ESFlag } from "@components/icons/ESFlag";
 export const siteSettings = {
-	name: "ChawkBazar",
+	name: "Buchqi",
 	description:
-		"Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS.",
+		"The Buchqi App Discover Your Style & Shop For Endless Inspiratio",
 	author: {
 		name: "RedQ, Inc.",
 		websiteUrl: "https://redq.io",
@@ -15,19 +15,19 @@ export const siteSettings = {
 	},
 	logo: {
 		url: "/assets/images/logo.svg",
-		alt: "ChawkBazar",
+		alt: "Buchqi",
 		href: "/",
 		width: 95,
 		height: 30,
 	},
 	defaultLanguage: "en",
-	currencyCode: "USD",
+	currencyCode: "PKR",
 	site_header: {
 		menu: [
-			{
-				id: 1,
-				path: "/",
-				label: "Home",
+			// {
+			// 	id: 1,
+			// 	path: "/",
+			// 	label: "Home",
 				// subMenu: [
 				// 	{
 				// 		id: 1,
@@ -60,9 +60,9 @@ export const siteSettings = {
 				// 		label: "menu-trendy",
 				// 	},
 				// ],
-			},
+			// },
 			{
-				id: 2,
+				id: 1,
 				path: "/search?q=men-wear",
 				label: "menu-men-wear",
 				columns: [
@@ -82,27 +82,32 @@ export const siteSettings = {
 									{
 										id: 2,
 										path: "/search?q=casual-shirts",
-										label: "menu-casual-shirts",
+										label: "menu-polo-shirts",
 									},
 									{
 										id: 3,
 										path: "/search?q=formal-shirts",
-										label: "menu-formal-shirts",
+										label: "menu-vests",
 									},
 									{
 										id: 4,
 										path: "/search?q=blazwers-coats",
-										label: "menu-blazwers-coats",
+										label: "menu-hoodies",
 									},
 									{
 										id: 5,
 										path: "/search?q=suits",
-										label: "menu-suits",
+										label: "menu-sweaters",
 									},
 									{
 										id: 6,
 										path: "/search?q=jackets",
 										label: "menu-jackets",
+									},
+									{
+										id: 7,
+										path: "/search?q=blazwers-coats",
+										label: "menu-blazers",
 									},
 								],
 							},
@@ -124,37 +129,27 @@ export const siteSettings = {
 							{
 								id: 1,
 								path: "/search?q=western-wear",
-								label: "menu-western-wear",
+								label: "menu-bottom-wear",
 								columnItemItems: [
 									{
 										id: 1,
 										path: "/search?q=dresses",
-										label: "menu-dresses",
+										label: "menu-jeans",
 									},
 									{
 										id: 2,
 										path: "/search?q=jumpsuits",
-										label: "menu-jumpsuits",
+										label: "menu-shorts",
 									},
 									{
 										id: 3,
 										path: "/search?q=tops-t-shirt",
-										label: "menu-tops-shirts",
+										label: "menu-underwear-socks",
 									},
 									{
 										id: 4,
 										path: "/search?q=shorts-skirts",
-										label: "menu-shorts-skirts",
-									},
-									{
-										id: 5,
-										path: "/search?q=shurgs",
-										label: "menu-shurgs",
-									},
-									{
-										id: 6,
-										path: "/search?q=blazers",
-										label: "menu-blazers",
+										label: "menu-trousers",
 									},
 								],
 							},
@@ -181,17 +176,17 @@ export const siteSettings = {
 									{
 										id: 1,
 										path: "/search?q=flats",
-										label: "menu-flats",
+										label: "menu-slipper",
 									},
 									{
 										id: 2,
 										path: "/search?q=casual-shoes",
-										label: "menu-casual-shoes",
+										label: "menu-sneaker",
 									},
 									{
 										id: 3,
 										path: "/search?q=heels",
-										label: "menu-heels",
+										label: "menu-formal-shoes",
 									},
 									{
 										id: 4,
@@ -330,7 +325,7 @@ export const siteSettings = {
 				],
 			},
 			{
-				id: 3,
+				id: 2,
 				path: "/search?q=women-wear",
 				label: "menu-women-wear",
 				columns: [
@@ -495,22 +490,22 @@ export const siteSettings = {
 							{
 								id: 1,
 								path: "/search?q=western-wear",
-								label: "menu-western-wear",
+								label: "menu-bottom-wear",
 								columnItemItems: [
 									{
 										id: 1,
 										path: "/search?q=dresses",
-										label: "menu-dresses",
+										label: "menu-jeans",
 									},
 									{
 										id: 2,
 										path: "/search?q=jumpsuits",
-										label: "menu-jumpsuits",
+										label: "menu-shorts",
 									},
 									{
 										id: 3,
 										path: "/search?q=tops-t-shirt",
-										label: "menu-tops-shirts",
+										label: "menu-underwear-socks",
 									},
 									{
 										id: 4,
@@ -597,274 +592,274 @@ export const siteSettings = {
 					},
 				],
 			},
-			{
-				id: 4,
-				path: "/search?q=casual-wear",
-				label: "menu-casual-wear",
-				columns: [
-					{
-						id: 1,
-						columnItems: [
-							{
-								id: 1,
-								path: "/search?q=gadgets",
-								label: "menu-gadgets",
-								columnItemItems: [
-									{
-										id: 1,
-										path: "/search?q=smart-wearables",
-										label: "menu-smart-wearables",
-									},
-									{
-										id: 2,
-										path: "/search?q=headphones",
-										label: "menu-headphones",
-									},
-								],
-							},
-							{
-								id: 2,
-								path: "/search?q=jewellers",
-								label: "menu-jewellers",
-								columnItemItems: [
-									{
-										id: 1,
-										path: "/search?q=fashion-jewellers",
-										label: "menu-fashion-jewellers",
-									},
-									{
-										id: 2,
-										path: "/search?q=fine-jewellers",
-										label: "menu-fine-jewellers",
-									},
-								],
-							},
-							{
-								id: 3,
-								path: "/search?q=backpacks",
-								label: "menu-backpacks",
-							},
-							{
-								id: 4,
-								path: "/search?q=handbags-wallets",
-								label: "menu-handbags-wallets",
-							},
-						],
-					},
-					{
-						id: 2,
-						columnItems: [
-							{
-								id: 1,
-								path: "/search?q=top-wear",
-								label: "menu-top-wear",
-								columnItemItems: [
-									{
-										id: 1,
-										path: "/search?q=t-shit-shirtrt",
-										label: "menu-t-shirt",
-									},
-									{
-										id: 2,
-										path: "/search?q=casual-shirts",
-										label: "menu-casual-shirts",
-									},
-									{
-										id: 3,
-										path: "/search?q=formal-shirts",
-										label: "menu-formal-shirts",
-									},
-									{
-										id: 4,
-										path: "/search?q=blazwers-coats",
-										label: "menu-blazwers-coats",
-									},
-									{
-										id: 5,
-										path: "/search?q=suits",
-										label: "menu-suits",
-									},
-									{
-										id: 6,
-										path: "/search?q=jackets",
-										label: "menu-jackets",
-									},
-								],
-							},
-							{
-								id: 2,
-								path: "/search?q=belt-scarves",
-								label: "menu-belt-scarves",
-							},
-							{
-								id: 3,
-								path: "/search?q=watches-wearables",
-								label: "menu-watches-wearables",
-							},
-						],
-					},
-					{
-						id: 3,
-						columnItems: [
-							{
-								id: 1,
-								path: "/search?q=footwear",
-								label: "menu-footwear",
-								columnItemItems: [
-									{
-										id: 1,
-										path: "/search?q=flats",
-										label: "menu-flats",
-									},
-									{
-										id: 2,
-										path: "/search?q=casual-shoes",
-										label: "menu-casual-shoes",
-									},
-									{
-										id: 3,
-										path: "/search?q=heels",
-										label: "menu-heels",
-									},
-									{
-										id: 4,
-										path: "/search?q=boots",
-										label: "menu-boots",
-									},
-								],
-							},
-							{
-								id: 2,
-								path: "/search?q=sports-active-wear",
-								label: "menu-sports-active-wear",
-								columnItemItems: [
-									{
-										id: 1,
-										path: "/search?q=clothing",
-										label: "menu-clothing",
-									},
-									{
-										id: 2,
-										path: "/search?q=footwear",
-										label: "menu-footwear",
-									},
-									{
-										id: 3,
-										path: "/search?q=sports-accessories",
-										label: "menu-sports-accessories",
-									},
-								],
-							},
-						],
-					},
-					{
-						id: 4,
-						columnItems: [
-							{
-								id: 1,
-								path: "/search?q=western-wear",
-								label: "menu-western-wear",
-								columnItemItems: [
-									{
-										id: 1,
-										path: "/search?q=dresses",
-										label: "menu-dresses",
-									},
-									{
-										id: 2,
-										path: "/search?q=jumpsuits",
-										label: "menu-jumpsuits",
-									},
-									{
-										id: 3,
-										path: "/search?q=tops-t-shirt",
-										label: "menu-tops-shirts",
-									},
-									{
-										id: 4,
-										path: "/search?q=shorts-skirts",
-										label: "menu-shorts-skirts",
-									},
-									{
-										id: 5,
-										path: "/search?q=shurgs",
-										label: "menu-shurgs",
-									},
-									{
-										id: 6,
-										path: "/search?q=blazers",
-										label: "menu-blazers",
-									},
-								],
-							},
-							{
-								id: 2,
-								path: "/search?q=plus-size",
-								label: "menu-plus-size",
-							},
-							{
-								id: 3,
-								path: "/search?q=sunglasses-frames",
-								label: "menu-sunglasses-frames",
-							},
-						],
-					},
-					{
-						id: 5,
-						columnItems: [
-							{
-								id: 1,
-								path: "/search?q=lingerie-sleepwear",
-								label: "menu-lingerie-sleepwear",
-								columnItemItems: [
-									{
-										id: 1,
-										path: "/search?q=bra",
-										label: "menu-bra",
-									},
-									{
-										id: 2,
-										path: "/search?q=briefs",
-										label: "menu-briefs",
-									},
-									{
-										id: 3,
-										path: "/search?q=sleepwear",
-										label: "menu-sleepwear",
-									},
-								],
-							},
-							{
-								id: 2,
-								path: "/search?q=belt-scarves",
-								label: "menu-belt-scarves",
-								columnItemItems: [
-									{
-										id: 1,
-										path: "/search?q=makeup",
-										label: "menu-makeup",
-									},
-									{
-										id: 2,
-										path: "/search?q=skincare",
-										label: "menu-skincare",
-									},
-									{
-										id: 3,
-										path: "/search?q=premium-beauty",
-										label: "menu-premium-beauty",
-									},
-									{
-										id: 4,
-										path: "/search?q=lipsticks",
-										label: "menu-lipsticks",
-									},
-								],
-							},
-						],
-					},
-				],
-			},
+			// {
+			// 	id: 3,
+			// 	path: "/search?q=casual-wear",
+			// 	label: "menu-casual-wear",
+			// 	columns: [
+			// 		{
+			// 			id: 1,
+			// 			columnItems: [
+			// 				{
+			// 					id: 1,
+			// 					path: "/search?q=gadgets",
+			// 					label: "menu-gadgets",
+			// 					columnItemItems: [
+			// 						{
+			// 							id: 1,
+			// 							path: "/search?q=smart-wearables",
+			// 							label: "menu-smart-wearables",
+			// 						},
+			// 						{
+			// 							id: 2,
+			// 							path: "/search?q=headphones",
+			// 							label: "menu-headphones",
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					id: 2,
+			// 					path: "/search?q=jewellers",
+			// 					label: "menu-jewellers",
+			// 					columnItemItems: [
+			// 						{
+			// 							id: 1,
+			// 							path: "/search?q=fashion-jewellers",
+			// 							label: "menu-fashion-jewellers",
+			// 						},
+			// 						{
+			// 							id: 2,
+			// 							path: "/search?q=fine-jewellers",
+			// 							label: "menu-fine-jewellers",
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					id: 3,
+			// 					path: "/search?q=backpacks",
+			// 					label: "menu-backpacks",
+			// 				},
+			// 				{
+			// 					id: 4,
+			// 					path: "/search?q=handbags-wallets",
+			// 					label: "menu-handbags-wallets",
+			// 				},
+			// 			],
+			// 		},
+			// 		{
+			// 			id: 2,
+			// 			columnItems: [
+			// 				{
+			// 					id: 1,
+			// 					path: "/search?q=top-wear",
+			// 					label: "menu-top-wear",
+			// 					columnItemItems: [
+			// 						{
+			// 							id: 1,
+			// 							path: "/search?q=t-shit-shirtrt",
+			// 							label: "menu-t-shirt",
+			// 						},
+			// 						{
+			// 							id: 2,
+			// 							path: "/search?q=casual-shirts",
+			// 							label: "menu-casual-shirts",
+			// 						},
+			// 						{
+			// 							id: 3,
+			// 							path: "/search?q=formal-shirts",
+			// 							label: "menu-formal-shirts",
+			// 						},
+			// 						{
+			// 							id: 4,
+			// 							path: "/search?q=blazwers-coats",
+			// 							label: "menu-blazwers-coats",
+			// 						},
+			// 						{
+			// 							id: 5,
+			// 							path: "/search?q=suits",
+			// 							label: "menu-suits",
+			// 						},
+			// 						{
+			// 							id: 6,
+			// 							path: "/search?q=jackets",
+			// 							label: "menu-jackets",
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					id: 2,
+			// 					path: "/search?q=belt-scarves",
+			// 					label: "menu-belt-scarves",
+			// 				},
+			// 				{
+			// 					id: 3,
+			// 					path: "/search?q=watches-wearables",
+			// 					label: "menu-watches-wearables",
+			// 				},
+			// 			],
+			// 		},
+			// 		{
+			// 			id: 3,
+			// 			columnItems: [
+			// 				{
+			// 					id: 1,
+			// 					path: "/search?q=footwear",
+			// 					label: "menu-footwear",
+			// 					columnItemItems: [
+			// 						{
+			// 							id: 1,
+			// 							path: "/search?q=flats",
+			// 							label: "menu-flats",
+			// 						},
+			// 						{
+			// 							id: 2,
+			// 							path: "/search?q=casual-shoes",
+			// 							label: "menu-casual-shoes",
+			// 						},
+			// 						{
+			// 							id: 3,
+			// 							path: "/search?q=heels",
+			// 							label: "menu-heels",
+			// 						},
+			// 						{
+			// 							id: 4,
+			// 							path: "/search?q=boots",
+			// 							label: "menu-boots",
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					id: 2,
+			// 					path: "/search?q=sports-active-wear",
+			// 					label: "menu-sports-active-wear",
+			// 					columnItemItems: [
+			// 						{
+			// 							id: 1,
+			// 							path: "/search?q=clothing",
+			// 							label: "menu-clothing",
+			// 						},
+			// 						{
+			// 							id: 2,
+			// 							path: "/search?q=footwear",
+			// 							label: "menu-footwear",
+			// 						},
+			// 						{
+			// 							id: 3,
+			// 							path: "/search?q=sports-accessories",
+			// 							label: "menu-sports-accessories",
+			// 						},
+			// 					],
+			// 				},
+			// 			],
+			// 		},
+			// 		{
+			// 			id: 4,
+			// 			columnItems: [
+			// 				{
+			// 					id: 1,
+			// 					path: "/search?q=western-wear",
+			// 					label: "menu-western-wear",
+			// 					columnItemItems: [
+			// 						{
+			// 							id: 1,
+			// 							path: "/search?q=dresses",
+			// 							label: "menu-dresses",
+			// 						},
+			// 						{
+			// 							id: 2,
+			// 							path: "/search?q=jumpsuits",
+			// 							label: "menu-jumpsuits",
+			// 						},
+			// 						{
+			// 							id: 3,
+			// 							path: "/search?q=tops-t-shirt",
+			// 							label: "menu-tops-shirts",
+			// 						},
+			// 						{
+			// 							id: 4,
+			// 							path: "/search?q=shorts-skirts",
+			// 							label: "menu-shorts-skirts",
+			// 						},
+			// 						{
+			// 							id: 5,
+			// 							path: "/search?q=shurgs",
+			// 							label: "menu-shurgs",
+			// 						},
+			// 						{
+			// 							id: 6,
+			// 							path: "/search?q=blazers",
+			// 							label: "menu-blazers",
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					id: 2,
+			// 					path: "/search?q=plus-size",
+			// 					label: "menu-plus-size",
+			// 				},
+			// 				{
+			// 					id: 3,
+			// 					path: "/search?q=sunglasses-frames",
+			// 					label: "menu-sunglasses-frames",
+			// 				},
+			// 			],
+			// 		},
+			// 		{
+			// 			id: 5,
+			// 			columnItems: [
+			// 				{
+			// 					id: 1,
+			// 					path: "/search?q=lingerie-sleepwear",
+			// 					label: "menu-lingerie-sleepwear",
+			// 					columnItemItems: [
+			// 						{
+			// 							id: 1,
+			// 							path: "/search?q=bra",
+			// 							label: "menu-bra",
+			// 						},
+			// 						{
+			// 							id: 2,
+			// 							path: "/search?q=briefs",
+			// 							label: "menu-briefs",
+			// 						},
+			// 						{
+			// 							id: 3,
+			// 							path: "/search?q=sleepwear",
+			// 							label: "menu-sleepwear",
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					id: 2,
+			// 					path: "/search?q=belt-scarves",
+			// 					label: "menu-belt-scarves",
+			// 					columnItemItems: [
+			// 						{
+			// 							id: 1,
+			// 							path: "/search?q=makeup",
+			// 							label: "menu-makeup",
+			// 						},
+			// 						{
+			// 							id: 2,
+			// 							path: "/search?q=skincare",
+			// 							label: "menu-skincare",
+			// 						},
+			// 						{
+			// 							id: 3,
+			// 							path: "/search?q=premium-beauty",
+			// 							label: "menu-premium-beauty",
+			// 						},
+			// 						{
+			// 							id: 4,
+			// 							path: "/search?q=lipsticks",
+			// 							label: "menu-lipsticks",
+			// 						},
+			// 					],
+			// 				},
+			// 			],
+			// 		},
+			// 	],
+			// },
 			// {
 			// 	id: 5,
 			// 	path: "/search",
