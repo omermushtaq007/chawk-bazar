@@ -10,7 +10,7 @@ import { useTranslation } from "next-i18next";
 
 const LoginForm: React.FC = () => {
 	const { t } = useTranslation();
-	const { setModalView, openModal, closeModal } = useUI();
+	const { setModalView, openModal, closeModal, toastText, setErrorMessage } = useUI();
 	const { mutate: login, isLoading } = useLoginMutation();
 
 	const {
@@ -25,7 +25,6 @@ const LoginForm: React.FC = () => {
 			password,
 			remember_me,
 		});
-		console.log(email, password, remember_me, "data");
 	}
 	function handelSocialLogin() {
 		login({
@@ -42,6 +41,7 @@ const LoginForm: React.FC = () => {
 		setModalView("FORGET_PASSWORD");
 		return openModal();
 	}
+
 	return (
 		<div className="overflow-hidden bg-white mx-auto rounded-lg w-full sm:w-96 md:w-450px border border-gray-300 py-5 px-5 sm:px-8">
 			<div className="text-center mb-6 pt-2.5">
@@ -52,16 +52,19 @@ const LoginForm: React.FC = () => {
 					{t("common:login-helper")}
 				</p>
 			</div>
+
 			<form
 				onSubmit={handleSubmit(onSubmit)}
 				className="flex flex-col justify-center"
 				noValidate
 			>
 				<div className="flex flex-col space-y-3.5">
+					
 					<Input
 						labelKey="forms:label-email"
 						type="email"
 						variant="solid"
+						inputClassName={toastText && "border-red-500"}
 						{...register("email", {
 							required: `${t("forms:email-required")}`,
 							pattern: {
@@ -75,10 +78,18 @@ const LoginForm: React.FC = () => {
 					<PasswordInput
 						labelKey="forms:label-password"
 						errorKey={errors.password?.message}
+						inputClassName={toastText && "border-red-500"}				
 						{...register("password", {
 							required: `${t("forms:password-required")}`,
 						})}
 					/>
+					{
+						toastText && (
+							<div className="text-center text-sm text-red-600">
+								{toastText}
+							</div>
+							)
+					}
 					<div className="flex items-center justify-center">
 						<div className="flex items-center flex-shrink-0">
 							<label className="switch relative inline-block w-10 cursor-pointer">

@@ -24,9 +24,9 @@ import { GetStaticProps } from "next";
 export default function Home() {
 	return (
 		<>
-			<Container>
-				{/* <HeroWithCategoryFlash /> */}
-			</Container>
+			{/* <Container>
+				<HeroWithCategoryFlash />
+			</Container> */}
 			<BannerSliderBlock />
 			<Container>
 				<CategoryBlock sectionHeading="text-shop-by-category" />

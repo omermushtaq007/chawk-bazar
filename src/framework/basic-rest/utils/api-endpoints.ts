@@ -20,3 +20,8 @@ export const API_ENDPOINTS = {
   ORDERS: "/orders.json",
   ORDER: "/order.json",
 };
+
+export const NODE_API_ENDPOINTS = {
+  LOGIN: "/users/login",
+  REGISTER: "/users/register",
+}

@@ -84,6 +84,10 @@ type Action =
   | {
       type: "SET_USER_AVATAR";
       value: string;
+    }
+    |{
+      type: "ERROR";
+      text: ToastText;
     };
 
 type MODAL_VIEWS =
@@ -111,6 +115,12 @@ function uiReducer(state: State, action: Action) {
         ...state,
         isAuthorized: false,
       };
+    }
+    case "ERROR": {
+      return {
+        ...state,
+        toastText: action.text,
+      }
     }
     case "OPEN_SIDEBAR": {
       return {
@@ -216,13 +226,13 @@ export const UIProvider: React.FC = (props) => {
   const closeSidebar = () => dispatch({ type: "CLOSE_SIDEBAR" });
   const toggleSidebar = () =>
     state.displaySidebar
-      ? dispatch({ type: "CLOSE_SIDEBAR" })
-      : dispatch({ type: "OPEN_SIDEBAR" });
-  const closeSidebarIfPresent = () =>
+    ? dispatch({ type: "CLOSE_SIDEBAR" })
+    : dispatch({ type: "OPEN_SIDEBAR" });
+    const closeSidebarIfPresent = () =>
     state.displaySidebar && dispatch({ type: "CLOSE_CART" });
-  const openCart = () => dispatch({ type: "OPEN_CART" });
-  const closeCart = () => dispatch({ type: "CLOSE_CART" });
-  const toggleCart = () =>
+    const openCart = () => dispatch({ type: "OPEN_CART" });
+    const closeCart = () => dispatch({ type: "CLOSE_CART" });
+    const toggleCart = () =>
     state.displaySidebar
       ? dispatch({ type: "CLOSE_CART" })
       : dispatch({ type: "OPEN_CART" });
@@ -236,7 +246,8 @@ export const UIProvider: React.FC = (props) => {
   const closeModal = () => dispatch({ type: "CLOSE_MODAL" });
   const openSearch = () => dispatch({ type: "OPEN_SEARCH" });
   const closeSearch = () => dispatch({ type: "CLOSE_SEARCH" });
-
+  
+  const setErrorMessage = (error:string) => dispatch({ type: "SET_TOAST_TEXT", text: error });
   const setUserAvatar = (_value: string) =>
     dispatch({ type: "SET_USER_AVATAR", value: _value });
 
@@ -252,6 +263,7 @@ export const UIProvider: React.FC = (props) => {
       ...state,
       authorize,
       unauthorize,
+      setErrorMessage,
       openSidebar,
       closeSidebar,
       toggleSidebar,

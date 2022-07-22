@@ -1,19 +1,23 @@
 import { useUI } from "@contexts/ui.context";
-// import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
-// import http from "@framework/utils/http";
+import { NODE_API_ENDPOINTS } from "@framework/utils/api-endpoints";
+import http from "@framework/utils/node-http";
 import Cookies from "js-cookie";
 import { useMutation } from "react-query";
 
 export interface SignUpInputType {
   email: string;
   password: string;
-  name: string;
+  verifyPassword: string;   
+  fullname: string;
 }
 async function signUp(input: SignUpInputType) {
-  // return http.post(API_ENDPOINTS.LOGIN, input);
-  return {
-    token: `${input.email}.${input.name}`.split("").reverse().join(""),
-  };
+  const response =  http.post(NODE_API_ENDPOINTS.REGISTER, input);
+  if (await response) {
+    const { data } = await response;
+    return data;
+  } else {
+    throw new Error("Sign up failed");
+  }
 }
 export const useSignUpMutation = () => {
   const { authorize, closeModal } = useUI();

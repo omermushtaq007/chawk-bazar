@@ -9,15 +9,18 @@ import { ImGoogle2, ImFacebook2 } from "react-icons/im";
 import Link from "@components/ui/link";
 import { ROUTES } from "@utils/routes";
 import { useTranslation } from "next-i18next";
+import { useEffect, useState } from "react";
 
 const SignUpForm: React.FC = () => {
 	const { t } = useTranslation();
+	const [message, setMessage] = useState("")
 	const { mutate: signUp, isLoading } = useSignUpMutation();
-	const { setModalView, openModal, closeModal } = useUI();
+	const { setModalView, openModal, closeModal, setErrorMessage, toastText } = useUI();
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
+		getValues
 	} = useForm<SignUpInputType>();
 
 	function handleSignIn() {
@@ -25,14 +28,10 @@ const SignUpForm: React.FC = () => {
 		return openModal();
 	}
 
-	function onSubmit({ name, email, password }: SignUpInputType) {
-		signUp({
-			name,
-			email,
-			password,
-		});
-		console.log(name, email, password, "sign form values");
+	function onSubmit({ fullname, email, password, verifyPassword }: SignUpInputType) {
+		console.log(fullname, email, password, verifyPassword , " sign form values");
 	}
+
 	return (
 		<div className="py-5 px-5 sm:px-8 bg-white mx-auto rounded-lg w-full sm:w-96 md:w-450px border border-gray-300">
 			<div className="text-center mb-6 pt-2.5">
@@ -66,10 +65,10 @@ const SignUpForm: React.FC = () => {
 						labelKey="forms:label-name"
 						type="text"
 						variant="solid"
-						{...register("name", {
+						{...register("fullname", {
 							required: "forms:name-required",
 						})}
-						errorKey={errors.name?.message}
+						errorKey={errors.fullname?.message}
 					/>
 					<Input
 						labelKey="forms:label-email"
@@ -90,8 +89,37 @@ const SignUpForm: React.FC = () => {
 						errorKey={errors.password?.message}
 						{...register("password", {
 							required: `${t("forms:password-required")}`,
+							minLength: {
+								value: 8,
+								message: t("forms:password-error"),
+							},
 						})}
 					/>
+					<PasswordInput
+						labelKey="forms:Confirm Password"
+						errorKey={errors.verifyPassword?.message || message}
+						{...register("verifyPassword", {
+							required: `${t("forms:password-required")}`,
+							minLength: {
+								value: 8,
+								message: t("forms:password-error"),
+							},
+							validate: (value:string) => {
+								const password:string = getValues("password");
+								console.log("Current Name ", value === password);
+								if (value === password) {
+									return true;
+								}
+								setMessage("Password Not Matched Bro!")
+								return false;
+							}
+						})}
+					/>
+					{toastText && (
+						<div className="text-red-500 text-sm">
+							{toastText}
+						</div>
+					)}
 					<div className="relative">
 						<Button
 							type="submit"

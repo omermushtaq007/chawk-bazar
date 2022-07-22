@@ -1,6 +1,6 @@
 import { useUI } from "@contexts/ui.context";
-// import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
-// import http from "@framework/utils/http";
+import { NODE_API_ENDPOINTS } from "@framework/utils/api-endpoints";
+import http from "@framework/utils/node-http";
 import Cookies from "js-cookie";
 import { useMutation } from "react-query";
 
@@ -10,21 +10,26 @@ export interface LoginInputType {
   remember_me: boolean;
 }
 async function login(input: LoginInputType) {
-  // return http.post(API_ENDPOINTS.LOGIN, input);
-  return {
-    token: `${input.email}.${input.remember_me}`.split("").reverse().join(""),
-  };
+  const response  = http.post(NODE_API_ENDPOINTS.LOGIN, input);
+  if (await response) {
+      const { data } = await response;
+      return data;
+  } else {
+    throw new Error("Login failed");
+  }
 }
 export const useLoginMutation = () => {
-  const { authorize, closeModal } = useUI();
+  const { authorize, closeModal, setErrorMessage } = useUI();
   return useMutation((input: LoginInputType) => login(input), {
     onSuccess: (data) => {
-      Cookies.set("auth_token", data.token);
+      Cookies.set("auth_token", data.user_token.token );
       authorize();
       closeModal();
+      setErrorMessage("");
     },
     onError: (data) => {
       console.log(data, "login error response");
+      setErrorMessage("Incorrect email or password");
     },
   });
 };
